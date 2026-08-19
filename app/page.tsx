@@ -108,14 +108,14 @@ export default function Home() {
 
       <section className="hero">
         <div className="eyebrow" data-reveal="fade">TO LING · 只给你看</div>
-        <h2 data-reveal="words"><span>想把每一次心动</span><span>都好好告诉你</span></h2>
+        <h2 data-reveal="words"><span>七夕快乐呀！😚</span><span>玲宝我爱你！</span></h2>
         <p data-reveal="slide">从一场晚霞开始，陪你走到星星都亮起来。</p>
         <div className="scroll-hint"><i />向下滑，故事才刚刚开始</div>
       </section>
 
       <section className="letter chapter">
         <div className="chapter-no" data-reveal="fade">01 / 初见</div>
-        <p className="big-copy" data-reveal="words"><span>人海那么大，</span><span>偏偏是你让我想</span><em>停留久一点。</em></p>
+        <p className="big-copy" data-reveal="words"><span>想跟你坐在日落的海滩听大海的呼吸；</span><span>想跟你爬遍银装素裹的雪山；</span><em>想跟你逛遍烟火盈街的闹市。</em></p>
         <div className="photo-placeholder" data-reveal="slide">
           {/* 静音是移动端允许视频自动播放的必要条件；背景音乐仍会正常播放 */}
           <video autoPlay muted loop playsInline preload="metadata" aria-label="我们的爱心手势视频">
@@ -126,15 +126,14 @@ export default function Home() {
 
       <section className="promise chapter">
         <div className="chapter-no" data-reveal="fade">02 / 喜欢</div>
-        <p className="tiny" data-reveal="type">如果喜欢有形状——</p>
-        <p className="big-copy" data-reveal="words"><span>大概是分享日落，</span><span>记住你的口味，</span><em>还有每一次想你。</em></p>
-        <div className="note-card" data-reveal="slide"><b>给玲儿的小纸条</b><p>这里是你的专属文案占位符。可以写纪念日、第一次见面的故事，或一句只有你们才懂的话。</p><span>—— 永远站在你这边的人</span></div>
+        <p className="big-copy" data-reveal="words"><span>七月七日长生殿，夜半无人私语。<br />在天愿作比翼鸟，在地愿做连理枝。</span></p>
+        <div className="note-card" data-reveal="slide"><b>如果喜欢有形状：</b><p>那大概是我辅助你女娲去百步穿杨，你配合我公孙离拿下First blood！</p><span>—— 永远站在你这边的人</span></div>
       </section>
 
       <section className="night chapter">
         <div className="chapter-no light" data-reveal="fade">03 / 以后</div>
-        <p className="big-copy light" data-reveal="words"><span>晚霞会落下，</span><span>可星星会替我</span><em>继续说喜欢你。</em></p>
-        <p className="star-note" data-reveal="slide">北斗七星替我指路，<br />北极星替我守着你。</p>
+        <p className="big-copy light" data-reveal="words"><span>看过人间烟火万千，尝过人生苦辣甘甜，只贪恋有你的瞬间。</span></p>
+        <p className="star-note" data-reveal="slide">说爱我一万遍，明年的七夕还要和你过！</p>
       </section>
 
       <section className="ask chapter">
