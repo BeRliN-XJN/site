@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useRef, useState } from "react";
 
 const questions = ["今天", "明天", "下周", "下个月", "明年"];
@@ -103,7 +101,7 @@ export default function Home() {
 
       {entered && <button className="sound-button" onClick={toggleMute} aria-label={muted ? "开启背景音乐" : "关闭背景音乐"}>{muted ? "♩" : "♫"}<span>{muted ? "开启" : "音乐"}</span></button>}
 
-      <div className="sky" aria-hidden="true"><div className="sun" /><div className="stars" /><div className="constellation">✦ ·　✦<br />　 ·　✦　 · ✦<br />　　　　✦</div><div className="cloud c1" /><div className="cloud c2" /></div>
+      <div className="sky" aria-hidden="true"><div className="sun" /><div className="stars" /><div className="constellation">{"✦ ·　✦"}<br />{"　 ·　✦　 · ✦"}<br />{"　　　　✦"}</div><div className="cloud c1" /><div className="cloud c2" /></div>
       {entered && <BackgroundMascots phase={mascotPhase} />}
 
       <section className="hero">
@@ -143,7 +141,7 @@ export default function Home() {
       </section>
 
       <section className="share-section">
-        <div className="share-card" data-reveal="slide"><small>LING&apos;S LOVE LETTER</small><h3>玲儿专属</h3><p>把喜欢，写进每一个明天。</p><div className="card-moons">☾　✦　♡</div></div>
+        <div className="share-card" data-reveal="slide"><small>LING&apos;S LOVE LETTER</small><h3>玲儿专属</h3><p>把喜欢，写进每一个明天。</p><div className="card-moons">{"☾　✦　♡"}</div></div>
         <button className="share-button" onClick={share}>分享这份心意 ↗</button>
       </section>
 

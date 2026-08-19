@@ -1,6 +1,6 @@
-# 玲儿专属
+# 玲儿专属（Cloudflare Pages 静态版）
 
-移动端优先的纯静态恋爱惊喜网站，无后端、无数据库依赖。
+移动端优先的恋爱惊喜网站。网站是纯静态 Vite + React 项目，不依赖服务器、数据库或 Cloudflare Worker。
 
 ## 本地运行
 
@@ -9,32 +9,36 @@ npm install
 npm run dev
 ```
 
-生产构建：
+本地地址默认为 `http://localhost:3000/`。
+
+## 构建检查
 
 ```bash
 npm run build
 ```
 
+构建完成后，Cloudflare Pages 所需的首页入口位于 `dist/index.html`。
+
+## Cloudflare Pages 部署设置
+
+将项目推送到 GitHub 后，在 Cloudflare Pages 中连接该仓库并填写：
+
+- 框架预设：`Vite`
+- 构建命令：`npm run build`
+- 构建输出目录：`dist`
+- 根目录：`/`（如果仓库根目录就是本项目）
+- Node.js 版本：`22`
+
+保存后重新部署即可。不要填写 `dist/client`，也不要使用 Wrangler 部署命令。
+
 ## 替换素材
 
-- **背景音乐**：当前使用 `public/music/familiar-stranger.mp3`，用户点击启动页的“点击进入”后会自动播放。替换时保持文件名不变即可。
-- **回忆视频**：当前照片区域使用 `public/memories/heart-hands.mp4`，设置为静音、自动、循环、内联播放，以兼容移动端浏览器。
-- **角色图片**：三张正式形象位于 `public/characters/`。保持文件名不变即可随时用更高清版本覆盖；动画会自动继续生效。
-- **爱的文案**：搜索 `文案占位符` 后直接修改。结尾数字可搜索 `数字占位符` 修改两处。
-- **提问时间**：修改 `app/page.tsx` 顶部的 `questions` 数组即可增加、删除或调整顺序。
-- **主题颜色**：在 `app/globals.css` 顶部 `:root` 中修改桃粉、奶油和深夜色。
+- 背景音乐：`public/music/familiar-stranger.mp3`
+- 回忆视频：`public/memories/heart-hands.mp4`
+- “爱！”分支视频：`public/choices/love.mp4`
+- “emm...”分支视频：`public/choices/emm.mp4`
+- 角色图片：`public/characters/`
+- 页面文案与问答：`app/page.tsx`
+- 页面样式：`app/globals.css`
 
-## 部署到 Cloudflare
-
-### Cloudflare Pages（静态资源方式）
-
-1. 将项目推送到 GitHub。
-2. 在 Cloudflare 控制台进入 Workers & Pages，新建 Pages 项目并连接仓库。
-3. 构建命令填 `npm run build`，输出目录按构建日志中的静态资源目录设置。
-4. 部署完成后绑定自定义域名即可。
-
-本项目也包含 `.openai/hosting.json`，可由 Codex Sites 直接发布为 Cloudflare 兼容站点。
-
-## 浏览器兼容
-
-支持 iOS Safari 14+ 与 Android Chrome 90+。音乐严格在点击启动页后播放，以符合移动浏览器的自动播放限制；动画支持系统“减少动态效果”设置。
+`public/` 中的文件会在构建时自动原样复制到 `dist/`。
